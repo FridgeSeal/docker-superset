@@ -63,6 +63,8 @@ RUN useradd -U -m superset && \
         werkzeug==0.14.1 && \
     pip install superset==${SUPERSET_VERSION}
 
+RUN pip install snowflake-sqlalchemy
+
 # Configure Filesystem
 COPY superset /usr/local/bin
 VOLUME /home/superset \
